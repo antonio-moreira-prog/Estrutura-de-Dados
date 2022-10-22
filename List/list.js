@@ -1,37 +1,37 @@
 function List() {
-    let item = []
+    let item = [];
 
     // Inserir sempre no final
     this.insert = function (element) {
-        item[item.length] = element
+        item[item.length] = element;
         // item.push(element)
     }
 
     // Passar um elemento para ser inserido numa posição específica
     this.insertAt = function (element, index) {
         if (index >= 0 && index <= item.length) {
-            item[index] = element
+            item[index] = element;
         } else {
-            console.log('Erro: indice invalido!')
+            console.log('Erro: indice invalido!');
         }
     }
 
     // Exibir a lista no formato de uma String
     this.toString = function () {
-        return `[${item}]`
+        return `[${item}]`;
     }
 
     this.print = function () {
-        console.log(this.toString())
+        console.log(this.toString());
     }
 
     this.indexOf = function (element) {
         for (let i = 0; i < item.length; i++) {
             if (element == item[i]) {
-                return i
+                return i;
             }
         }
-        return -1
+        return -1;
     }
 
     this.lastIndexOf = function (element) {
@@ -41,25 +41,25 @@ function List() {
         //     }
         // }
         // return -1
-        let last = -1
+        let last = -1;
         for (let i = 0; i < item.length; i++) {
             if (element == item[i]) {
-                last = i
+                last = i;
             }
         }
-        return last
+        return last;
     }
 
     this.isEmpty = function () {
-        return item.length == 0
+        return item.length == 0;
     }
 
     this.size = function () {
-        return item.length
+        return item.length;
     }
 
     this.clear = function () {
-        item = []
+        item = [];
     }
 
     this.contains = function (element) {
@@ -69,20 +69,20 @@ function List() {
         //     }
         // }
         // return false
-        return this.indexOf(element) >= 0
+        return this.indexOf(element) >= 0;
     }
 
     this.removeAt = function (index) {
         if (index >= 0 && index < item.length) {
-            item.splice(index, 1)
+            item.splice(index, 1);
         } else {
             // console.log('Erro: indice invalido!')
-            console.log('Erro: nao e possivel remover o elemento!')
+            console.log('Erro: nao e possivel remover o elemento!');
         }
     }
 
     this.remove = function (element) {
-        this.removeAt(this.indexOf(element))
+        this.removeAt(this.indexOf(element));
         // let index = this.indexOf(element)
         // if (index >= 0) {
         //     item.splice(index, 1)
@@ -92,27 +92,27 @@ function List() {
     }
 }
 
-const lista1 = new List()
-console.log(lista1.isEmpty())
-lista1.insert(8)
-console.log(lista1.isEmpty())
-lista1.insert(9)
-lista1.insert(10)
-lista1.insert(11)
-lista1.print()
-lista1.insertAt(12, 2)
-lista1.print()
-lista1.insertAt(15, 20)
-lista1.print()
-lista1.insertAt(15, 4)
-lista1.insert(9)
-lista1.print()
-lista1.print()
-console.log(lista1.indexOf(15))
-console.log(lista1.indexOf(9))
-console.log(lista1.lastIndexOf(9))
-console.log(lista1.indexOf(100))
-lista1.remove(11)
-lista1.remove(110)
-lista1.print()
-lista1.clear()
+const lista1 = new List();
+console.log(lista1.isEmpty());
+lista1.insert(8);
+console.log(lista1.isEmpty());
+lista1.insert(9);
+lista1.insert(10);
+lista1.insert(11);
+lista1.print();
+lista1.insertAt(12, 2);
+lista1.print();
+lista1.insertAt(15, 20);
+lista1.print();
+lista1.insertAt(15, 4);
+lista1.insert(9);
+lista1.print();
+lista1.print();
+console.log(lista1.indexOf(15));
+console.log(lista1.indexOf(9));
+console.log(lista1.lastIndexOf(9));
+console.log(lista1.indexOf(100));
+lista1.remove(11);
+lista1.remove(110);
+lista1.print();
+lista1.clear();

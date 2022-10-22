@@ -1,4 +1,4 @@
-const read = require('readline-sync')
+const read = require('readline-sync');
 
 // let nota = Number(read.question('Digite a nota: '))
 
@@ -18,11 +18,11 @@ const read = require('readline-sync')
 
 //Loop infinito
 for(;;){
-    let nota = Number(read.question('Digite a nota: '))
+    let nota = Number(read.question('Digite a nota: '));
     if (nota < 0 || nota > 10) {
-        console.log('Nota inválida')
+        console.log('Nota inválida');
     } else {
-        console.log(`A nota ${nota} é válida`)
-        break
+        console.log(`A nota ${nota} é válida`);
+        break;
     }
 }

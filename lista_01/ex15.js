@@ -14,20 +14,20 @@
 // }
 
 function isPositive(n) {
-    return n > 0
+    return n > 0;
 }
 
-const read = require('readline-sync')
-let n = Number(read.question('Digite um numero: '))
+const read = require('readline-sync');
+let n = Number(read.question('Digite um numero: '));
 
 if (isPositive(n) == true) {
-    console.log(`${n} é positivo`)
+    console.log(`${n} é positivo`);
 } else {
-    console.log(`${n} nao é positivo`)
+    console.log(`${n} nao é positivo`);
 }
 
 if (isPositive(n)) {
-    console.log(`${n} é positivo`)
+    console.log(`${n} é positivo`);
 } else {
-    console.log(`${n} nao é positivo`)
+    console.log(`${n} nao é positivo`);
 }

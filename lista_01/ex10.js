@@ -1,7 +1,7 @@
-const read = require('readline-sync')
+const read = require('readline-sync');
 
-let inicio = Number(read.question('Digite o inicio: '))
-let fim = Number(read.question('Digite o fim: '))
+let inicio = Number(read.question('Digite o inicio: '));
+let fim = Number(read.question('Digite o fim: '));
 
 // if (inicio > fim){
 //     let aux = inicio
@@ -15,10 +15,10 @@ let fim = Number(read.question('Digite o fim: '))
 
 if (inicio < fim) {
     for (let i = inicio; i <= fim; i++) {
-        console.log(i)
+        console.log(i);
     }
 } else {
     for (let i = inicio; i >= fim; i--) {
-        console.log(i)
+        console.log(i);
     }
 }
