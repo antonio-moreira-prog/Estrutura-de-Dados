@@ -44,16 +44,37 @@ function Stack(length = 10){
             str += item[i] + '\n';
         }
         return str;
-    };
+    }
+    this.size = function () {
+        return item.length;
+    }
+    
 }
-const stack = new Stack();
 
+const stack = new Stack();
+const stack2 = new Stack();
 
 stack.push(2);
 stack.push(3);
-stack.push(10);
+stack.push(11);
 stack.push(54);
 stack.print();
+
 console.log('Elemento do topo da pilha ' + stack.peek());
 
 console.log('Elemento removido da pilha ' + stack.pop());
+
+
+console.log("Segunda Pilha");
+
+stack2.push(2);
+stack2.push(3);
+stack2.push(10);
+stack2.push(54);
+stack2.print();
+
+console.log('Elemento do topo da pilha ' + stack2.peek());
+
+console.log('Elemento removido da pilha ' + stack2.pop());
+
+
