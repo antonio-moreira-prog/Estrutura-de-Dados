@@ -1,4 +1,3 @@
-//2. Verificar se duas pilhas são iguais.
 function Stack() {
     let item = [];
 
@@ -29,11 +28,11 @@ function Stack() {
 
     // Exibir a pilha no formato de uma String
     this.toString = function () {
-        let str = ''
+        let str = '';
         for (let i = item.length - 1; i >= 0; i--) {
             str += item[i] + '\n';
-        }
-        return str;
+        };
+        return str
     }
 
     // Imprimir a pilha
@@ -51,7 +50,7 @@ function Stack() {
 
     // Gerar uma pilha clone da atual
     this.clone = function () {
-        let stack = new Stack();
+        let stack = new Stack()
         for (let i = 0; i < item.length; i++) {
             stack.push(item[i]);
         }
@@ -59,31 +58,19 @@ function Stack() {
     }
 }
 
-function compareStack(stack1, stack2) {
-    if (stack1.size() !== stack2.size()) {
-        return false;
+function arrayToStack(array) {
+    const stack = new Stack()
+    for (let i = 0; i < array.length; i++) {
+        stack.push(array[i]);
     }
-
-    while (!stack1.isEmpty()) {
-        if (stack1.pop() !== stack2.pop()) {
-            return false;
-        }
-    }
-    return true;
+    return stack;
 }
 
-const stack1 = new Stack();
-const stack2 = new Stack();
+vetor = [];
 for (let i = 0; i < 10; i++) {
-    stack1.push(i);
-    stack2.push(i);
+    vetor[i] = Math.floor(Math.random() * 100);
 }
+console.log(vetor);
 
-stack2.push(10);
-// stack1.print()
-// stack2.print()
-if (compareStack(stack1, stack2)) {
-    console.log('As pilhas sao iguais');
-} else {
-    console.log('As pilhas sao diferentes');
-}
+const stack = arrayToStack(vetor);
+stack.print();

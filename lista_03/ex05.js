@@ -1,4 +1,3 @@
-//2. Verificar se duas pilhas são iguais.
 function Stack() {
     let item = [];
 
@@ -29,7 +28,7 @@ function Stack() {
 
     // Exibir a pilha no formato de uma String
     this.toString = function () {
-        let str = ''
+        let str = '';
         for (let i = item.length - 1; i >= 0; i--) {
             str += item[i] + '\n';
         }
@@ -59,31 +58,21 @@ function Stack() {
     }
 }
 
-function compareStack(stack1, stack2) {
-    if (stack1.size() !== stack2.size()) {
-        return false;
+function decToBin(n) {
+    const stack = new Stack();
+
+    while (n != 0) {
+        let resto = n % 2;
+        stack.push(resto);
+        n = Math.floor(n / 2);
     }
-
-    while (!stack1.isEmpty()) {
-        if (stack1.pop() !== stack2.pop()) {
-            return false;
-        }
+    let bin = ''
+    while (!stack.isEmpty()) {
+        bin += stack.pop();
     }
-    return true;
+    return bin;
 }
 
-const stack1 = new Stack();
-const stack2 = new Stack();
-for (let i = 0; i < 10; i++) {
-    stack1.push(i);
-    stack2.push(i);
-}
-
-stack2.push(10);
-// stack1.print()
-// stack2.print()
-if (compareStack(stack1, stack2)) {
-    console.log('As pilhas sao iguais');
-} else {
-    console.log('As pilhas sao diferentes');
-}
+console.log(decToBin(255));
+console.log(decToBin(10));
+console.log(decToBin(20));
